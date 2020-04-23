@@ -58,7 +58,7 @@ defaultConfig {
         manifestPlaceholders = [
                 pushbots_app_id               : "YOUR_APP_ID",
                 pushbots_loglevel             : "DEBUG",
-                huawei_client_id              : "YOUR_SENDER_ID"
+                huawei_client_id              : "YOUR_CLIENT_ID"
         ]
 
     }

@@ -15,11 +15,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders = [
-                pushbots_app_id               : "5c1eb3380540a321e04c9e04",
-                pushbots_loglevel             : "DEBUG",
-                huawei_client_id              : "306516702546363584"
-        ]
     }
 
     buildTypes {
