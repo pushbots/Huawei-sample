@@ -1,4 +1,4 @@
-package com.example.huaweisample
+package com.pushbots.example.huaweisdk
 
 import android.app.Application
 import com.pushbots.huaweisdk.Pushbots

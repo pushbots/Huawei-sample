@@ -7,13 +7,19 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.example.huaweisample"
+        applicationId "com.pushbots.example.huaweisdk"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                pushbots_app_id               : "5c1eb3380540a321e04c9e04",
+                pushbots_loglevel             : "DEBUG",
+                huawei_client_id              : "306516702546363584"
+        ]
     }
 
     buildTypes {
@@ -29,6 +35,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation (name:'huaweisdk', ext:'aar')
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.huawei.hms:push:4.0.0.300'
+
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
