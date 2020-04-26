@@ -23,6 +23,8 @@ https://pushbots.com[PushBots] is a push notification service that help you mana
 - An https://developer.huawei.com/consumer/en[API-KEY and CLIENT-ID] from HWS (HUAWEI Service)
 - https://developer.android.com/studio[Android Studio]
 
+image::client_id.png[role="center"]
+
 <<<
 == Setup PushBots
 === 1. Adding PushBots Dependencies
