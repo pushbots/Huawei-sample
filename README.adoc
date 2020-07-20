@@ -20,7 +20,7 @@ https://pushbots.com[PushBots] is a push notification service that help you mana
 == Required For Setup:-
 - A https://pushbots.com[PushBots] account
 * You will find APP_ID while integrating your project with dashboard
-- An https://developer.huawei.com/consumer/en[API-KEY and CLIENT-ID] from HWS (HUAWEI Service)
+- An https://developer.huawei.com/consumer/en[APP-ID and CLIENT-ID] from HWS (HUAWEI Service)
 - https://developer.android.com/studio[Android Studio]
 
 image::client_id.png[role="center"]
@@ -44,9 +44,9 @@ allprojects {
 [source,groovy]
 .build.gradle
 ----
-implementation (name:'huaweisdk', ext:'aar') // local file for now
-implementation 'com.google.android.gms:play-services-location:17.0.0'
+implementation 'com.pushbots:pushbots-lib:3.3.0@aar'
 implementation 'com.huawei.hms:push:4.0.0.300'
+implementation 'com.google.android.gms:play-services-location:17.0.0' // optional
 ----
 
 
@@ -60,11 +60,24 @@ defaultConfig {
         manifestPlaceholders = [
                 pushbots_app_id               : "YOUR_APP_ID",
                 pushbots_loglevel             : "DEBUG",
-                huawei_client_id              : "YOUR_CLIENT_ID"
+                google_sender_id              : "YOUR_CLIENT_ID"
         ]
 
     }
 ----
+<<<
+<<<
+Set your app-id that you get from HMS console in your manifest:
+
+[source,xml]
+.Manifest.xml
+----
+ <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=YOUR_HMS_APP_ID" />
+----
+
+
 
 === 3. Initialize PushBots
 PushBots should be initialized when app just started, one of the existing ways is to initialize it in our application.
